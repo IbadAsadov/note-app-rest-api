@@ -10,6 +10,8 @@ Route::post('auth/login', [AuthController::class, 'signIn'])->name("login");
 
 Route::middleware('auth:sanctum')->group( function () {
     Route::get('me',[AuthController::class, 'me']);
+    Route::get('logout',[AuthController::class, 'logout']);
+
     Route::apiResource('notes', NoteController::class);
     Route::apiResource('users', UserController::class);
 });

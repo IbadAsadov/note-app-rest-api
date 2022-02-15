@@ -3,10 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Note;
-use App\Models\Role;
 use App\Models\User;
 use App\Observers\NoteObserver;
-use App\Observers\RoleObserver;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;

@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use App\Models\Note;
-use App\Models\Role;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;

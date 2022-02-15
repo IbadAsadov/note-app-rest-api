@@ -28,7 +28,6 @@ class AuthController extends BaseController
             $authUser = Auth::user();
             $success = [];
             $success['token'] =  $authUser->createToken('MyNoteApp')->plainTextToken;
-            $success['user'] =  $authUser;
 
             return $this->sendResponse($success);
         }
@@ -40,6 +39,13 @@ class AuthController extends BaseController
     public function me() : JsonResource
     {
         return new UserResource(auth()->user());
+    }
+
+    public function logout() : JsonResponse
+    {
+        auth()->user()->currentAccessToken()->delete();
+
+        return $this->sendResponse('Logout success');
     }
 
 }
